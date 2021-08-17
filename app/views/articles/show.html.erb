@@ -1,3 +1,9 @@
 <h1>Запись</h1>
 <h2><%= @article.title %></h2>
 <p><%= @article.body %></p>
+<ul>
+  <li><%= link_to "Редактировать", edit_article_path(@article) %></li>
+  <li><%= link_to "Удалить запись", article_path(@article),
+                method: :delete,
+                data: { confirm: "Вы уверенны?" } %></li>
+</ul>
